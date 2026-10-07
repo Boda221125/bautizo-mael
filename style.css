@@ -1,0 +1,604 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins,Arial,sans-serif;
+    background: #f7f6f2;
+    color: #475b66;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 0 70px #607d8b0b;
+}
+
+section {
+    padding: 80px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1, h2, .subtitle, .firma {
+    font-family: 'Great Vibes',Georgia,cursive;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    max-width: 760px;
+    margin: 24px auto 0;
+    font-size: clamp(34px, 6vw, 64px);
+    line-height: 1.35;
+    color: #719bb4;
+    text-wrap: balance;
+}
+
+h2 {
+    font-size: clamp(38px,6vw,52px);
+    color: #719bb4;
+    margin-bottom: 22px;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p {
+    max-width: 610px;
+    margin: 0 auto;
+}
+
+a {
+    color: #527e99;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #80969f;
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    font-size: 43px;
+    color: #ac9567;
+}
+
+.fecha {
+    letter-spacing: 2px;
+    margin: 16px auto 26px;
+}
+
+.caption {
+    margin: 20px auto;
+    color: #71808a;
+}
+
+#hero {
+    padding-top: 65px;
+}
+
+.decorado {
+    background: radial-gradient(ellipse at 0 0,#cfe3ed88,transparent 40%),radial-gradient(ellipse at 100% 100%,#efe5ce77,transparent 40%),#fff;
+}
+
+.photo-slot {
+    position: relative;
+    background: linear-gradient(145deg,#e9f3f8,#f6f1e5);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    color: #89a4b4;
+    font-family: Georgia,serif;
+    font-style: italic;
+}
+
+.foto-portada {
+    width: min(100%,350px);
+    height: 410px;
+    margin: auto;
+    border-radius: 170px 170px 14px 14px;
+    border: 8px solid white;
+    outline: 1px solid #d8e6ed;
+    box-shadow: 0 18px 50px #537b9017;
+}
+
+.photo-slot img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-link {
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.symbol, .divider {
+    font-size: 42px;
+    color: #acbcbb;
+    margin-bottom: 20px;
+}
+
+.divider {
+    margin: 42px auto;
+}
+
+blockquote {
+    font-family: Georgia,serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.9;
+    max-width: 620px;
+    margin: auto;
+}
+
+.nombres {
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.nombres p {
+    margin: 4px auto;
+}
+
+.tint {
+    background: #f3f8fa;
+}
+
+#countdown {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 14px;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+#countdown div {
+    background: white;
+    border: 1px solid #e0ebef;
+    border-radius: 16px;
+    padding: 22px 4px;
+}
+
+#countdown span {
+    display: block;
+    font-size: 33px;
+    color: #719bb4;
+}
+
+#countdown small {
+    font-size: 11px;
+    color: #7b8e96;
+}
+
+.lugares {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lugares section {
+    padding: 60px 24px;
+}
+
+.direccion {
+    margin: 18px auto;
+}
+
+.button, button {
+    font: inherit;
+    background: #719bb4;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    padding: 13px 28px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background .2s,transform .2s;
+}
+
+button:hover, .button:hover {
+    background: #557e98;
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+button:focus-visible, a:focus-visible {
+    outline: 3px solid #bea675;
+    outline-offset: 4px;
+}
+
+[hidden] {
+    display: none!important;
+}
+
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    max-width: 760px;
+    margin: 30px auto;
+}
+
+.fotos .photo-slot {
+    height: 290px;
+    border-radius: 14px;
+    border: 6px solid white;
+    box-shadow: 0 8px 25px #607d8b0d;
+}
+
+.fotos span {
+    padding: 15px;
+    font-size: 16px;
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    text-align: left;
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+input, select, textarea {
+    font: inherit;
+    font-size: 16px;
+    width: 100%;
+    padding: 13px 16px;
+    background: #fff;
+    border: 1px solid #cfdee5;
+    border-radius: 10px;
+    color: #475b66;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #a6c8da;
+    outline-offset: 2px;
+}
+
+form button {
+    margin-top: 14px;
+}
+
+.privacy {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #738791;
+}
+
+.trap {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-status {
+    font-size: 14px;
+    min-height: 26px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.form-status.error {
+    color: #a13636;
+}
+
+.form-status.success {
+    color: #32715b;
+}
+
+#timelineContainer {
+    max-width: 650px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.recuerdo {
+    padding: 25px 28px;
+    margin: 18px 0;
+    border: 1px solid #dbe8ee;
+    border-left: 4px solid #9ebdcc;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.recuerdo h3 {
+    color: #648ca4;
+}
+
+.recuerdo p {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin-top: 12px;
+}
+
+.recuerdo small {
+    color: #82939b;
+    font-size: 11px;
+}
+
+.firma {
+    font-size: 42px;
+    color: #719bb4;
+    margin-top: 28px;
+}
+
+.floating {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    font-size: 24px;
+    box-shadow: 0 5px 20px #0002;
+    z-index: 5;
+}
+
+.music {
+    bottom: 80px;
+}
+
+.music-status {
+    position: fixed;
+    bottom: 140px;
+    right: 18px;
+    background: white;
+    font-size: 12px;
+    z-index: 5;
+    max-width: 240px;
+}
+
+.music-status:empty {
+    display: none;
+}
+
+.reveal.animated {
+    animation: appear .8s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: .3;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media(max-width:600px) {
+    section {
+        padding: 60px 22px;
+    }
+    .foto-portada {
+        height: 350px;
+        width: 280px;
+    }
+    .lugares {
+        grid-template-columns: 1fr;
+    }
+    .lugares section+section {
+        border-top: 1px solid #edf1f3;
+    }
+    .fotos {
+        gap: 12px;
+    }
+    .fotos .photo-slot {
+        height: 210px;
+    }
+    blockquote {
+        font-size: 19px;
+    }
+    #countdown {
+        gap: 8px;
+    }
+    #countdown span {
+        font-size: 28px;
+    }
+    #countdown div {
+        padding: 18px 2px;
+    }
+    .eyebrow {
+        letter-spacing: 2px;
+    }
+    .nombres {
+        font-size: 17px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .reveal.animated {
+        animation: none;
+    }
+    button, .button {
+        transition: none;
+    }
+}
+
+.decorado:before, .decorado:after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 230px;
+    height: 165px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjMwIj48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImJsdWUiPjxzdG9wIHN0b3AtY29sb3I9IiNmM2Y4ZmMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhOWNiZGMiLz48L3JhZGlhbEdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iY3JlYW0iPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlOWRkYzMiLz48L3JhZGlhbEdyYWRpZW50PjxnIGlkPSJmbG93ZXIiPjxlbGxpcHNlIHJ5PSIyMyIgcng9IjEyIiBjeT0iLTE1IiBmaWxsPSJ1cmwoI2JsdWUpIi8+PGVsbGlwc2Ugcnk9IjIzIiByeD0iMTIiIGN5PSItMTUiIHRyYW5zZm9ybT0icm90YXRlKDcyKSIgZmlsbD0idXJsKCNibHVlKSIvPjxlbGxpcHNlIHJ5PSIyMyIgcng9IjEyIiBjeT0iLTE1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIiBmaWxsPSJ1cmwoI2JsdWUpIi8+PGVsbGlwc2Ugcnk9IjIzIiByeD0iMTIiIGN5PSItMTUiIHRyYW5zZm9ybT0icm90YXRlKDIxNikiIGZpbGw9InVybCgjYmx1ZSkiLz48ZWxsaXBzZSByeT0iMjMiIHJ4PSIxMiIgY3k9Ii0xNSIgdHJhbnNmb3JtPSJyb3RhdGUoMjg4KSIgZmlsbD0idXJsKCNibHVlKSIvPjxjaXJjbGUgcj0iOCIgZmlsbD0iI2Q4YzY5NyIvPjxjaXJjbGUgcj0iNCIgZmlsbD0iI2Y0ZWNkOSIvPjwvZz48ZyBpZD0ibGVhZiI+PHBhdGggZD0iTTAgMCBRLTIzIC0zMyAtOCAtNTQgUTE0IC0zOCAwIDAiIGZpbGw9IiM5Y2JiYjIiIG9wYWNpdHk9Ii42NSIvPjxwYXRoIGQ9Ik0wIDBMLTYgLTQ1IiBzdHJva2U9IiM3Mjk3OGIiIGZpbGw9Im5vbmUiIG9wYWNpdHk9Ii41Ii8+PC9nPjwvZGVmcz48ZyBvcGFjaXR5PSIuODUiPjxwYXRoIGQ9Ik0wIDEyUTExMCAxMCAyMzggODBNMTIgMFE1NSAxMjAgMTEwIDE4MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTdiZGFlIiBzdHJva2Utd2lkdGg9IjIiLz48dXNlIGhyZWY9IiNsZWFmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NSAzNSkgcm90YXRlKDcwKSIvPjx1c2UgaHJlZj0iI2xlYWYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMiA1MCkgcm90YXRlKDExNSkiLz48dXNlIGhyZWY9IiNsZWFmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNTggNjYpIHJvdGF0ZSg3MCkiLz48dXNlIGhyZWY9IiNsZWFmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTUgNzMpIHJvdGF0ZSgxMTApIi8+PHVzZSBocmVmPSIjbGVhZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjIgMTE1KSByb3RhdGUoLTQwKSIvPjx1c2UgaHJlZj0iI2xlYWYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg5IDE1Mikgcm90YXRlKDgwKSIvPjx1c2UgaHJlZj0iI2Zsb3dlciIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzAgMzApIHNjYWxlKDEuMikiLz48dXNlIGhyZWY9IiNmbG93ZXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExNSAzOCkgc2NhbGUoLjkpIi8+PHVzZSBocmVmPSIjZmxvd2VyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MyA4OSkgc2NhbGUoLjgpIi8+PHVzZSBocmVmPSIjZmxvd2VyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxODAgNDApIHNjYWxlKC42KSIvPjx1c2UgaHJlZj0iI2Zsb3dlciIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzggMTU2KSBzY2FsZSguNTUpIi8+PGNpcmNsZSBjeD0iNzIiIGN5PSIzNCIgcj0iMTciIGZpbGw9InVybCgjY3JlYW0pIi8+PGNpcmNsZSBjeD0iMTQ0IiBjeT0iNjYiIHI9IjE0IiBmaWxsPSJ1cmwoI2NyZWFtKSIvPjxjaXJjbGUgY3g9IjI2IiBjeT0iMTI4IiByPSIxMiIgZmlsbD0idXJsKCNjcmVhbSkiLz48L2c+PC9zdmc+') center/contain no-repeat;
+    transform: none;
+    opacity: .8;
+}
+
+.decorado:before {
+    top: 0;
+    left: 0;
+}
+
+.decorado:after {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.paloma {
+    width: 110px;
+    height: 85px;
+    margin: 0 auto 25px;
+    display: block;
+}
+
+@media(max-width:600px) {
+    .decorado:before, .decorado:after {
+        width: 150px;
+        height: 110px;
+    }
+}
+
+/* Fecha de celebración y accesos a los lugares. */
+.calendario {
+    max-width: 390px;
+    margin: 32px auto 0;
+    padding: 24px 20px;
+    border: 1px solid #dce8ee;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 12px 35px #607d8b0b;
+}
+
+.calendario table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.calendario caption {
+    padding-bottom: 22px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #648ca4;
+    text-transform: capitalize;
+}
+
+.calendario th {
+    padding-bottom: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #82949e;
+}
+
+.calendario td {
+    height: 44px;
+    font-size: 14px;
+    position: relative;
+}
+
+.calendario td span {
+    position: relative;
+    z-index: 1;
+}
+
+.dia-celebracion {
+    color: #517b96;
+    font-weight: 600;
+}
+
+.dia-celebracion::before {
+    content: '♡';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -52%);
+    font-family: Arial, sans-serif;
+    font-size: 47px;
+    line-height: 1;
+    color: #9bbfd2;
+}
+
+.lugar-icono {
+    display: block;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 24px;
+}
+
+.enlace-icono {
+    display: inline-block;
+    border-radius: 12px;
+}
+
+.enlace-icono:hover {
+    opacity: 0.8;
+}
+
+.mapa-ayuda {
+    margin-top: 16px;
+    max-width: 300px;
+    font-size: 12px;
+    color: #7c909a;
+}
+
+.mapa-pendiente:disabled {
+    opacity: 1;
+    color: #758b97;
+    background: #edf3f6;
+    cursor: default;
+}
+
+.photo-slot img {
+    object-position: center 30%;
+}
+
+@media (max-width: 600px) {
+    .calendario {
+        padding: 22px 12px;
+    }
+}
+
+.aviso-prueba {
+    padding: 10px 18px;
+    text-align: center;
+    background: #e8f1f5;
+    color: #5b7787;
+    font-size: 12px;
+}
